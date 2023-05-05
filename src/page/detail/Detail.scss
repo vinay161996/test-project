@@ -1,0 +1,153 @@
+@import '../../mixins.scss';
+
+.detailPage {
+    width: 100%;
+    min-height: 500px;
+    margin: 30px 0;
+
+    @include md {
+        margin: 50px 0;
+
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 25px;
+
+        @include md {
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .left {
+            flex-shrink: 0;
+
+            .posterImg {
+                width: 100%;
+                display: block;
+                border-radius: 12px;
+
+                @include md {
+                    max-width: 350px;
+                }
+            }
+        }
+
+        .right {
+            color: white;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-size: 28px;
+                line-height: 40px;
+                margin-bottom: 5px;
+
+                @include md {
+                    margin-bottom: 10px;
+
+                }
+
+                @include md {
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+            }
+
+            .genres {
+                justify-content: left;
+                gap: 10px;
+                margin-bottom: 5px;
+            }
+
+            .lang {
+                opacity: 0.5;
+                margin-bottom: 20px;
+            }
+
+            .row {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+                align-items: center;
+
+                @include md {
+                    gap: 20px;
+                }
+
+                .circleRating {
+                    max-width: 70px;
+                    background-color: var(--black2);
+
+                    @include md {
+                        max-width: 90px;
+                    }
+
+                    .CircularProgressbar-text {
+                        fill: white;
+                    }
+                }
+
+                .btn {
+                    padding: 10px;
+                    display: inline-block;
+                    border-radius: 10px;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 18px;
+                    background-color: var(--pink);
+                    color: white;
+
+                    @include md {
+                        padding: 15px;
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            .overview {
+                margin-bottom: 25px;
+
+                .heading {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+
+                .description {
+                    line-height: 24px;
+
+                    @include md {
+                        padding-right: 100px;
+                    }
+                }
+            }
+
+            .info {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 15px 0;
+                display: flex;
+
+                .infoItem {
+                    margin-right: 10px;
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+
+                .text {
+                    margin-right: 10px;
+                    opacity: 0.5;
+                    line-height: 24px;
+
+                    &.bold {
+                        font-weight: 600;
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+    }
+}

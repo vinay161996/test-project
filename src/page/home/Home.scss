@@ -1,0 +1,24 @@
+@import '../../mixins.scss';
+
+.home-page {
+    min-height: 500px;
+
+    .cardItems {
+        width: 100%;
+        padding: 30px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+
+        @include sm {
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 50px 0;
+            row-gap: 50px;
+        }
+
+        @include md {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+    }
+}

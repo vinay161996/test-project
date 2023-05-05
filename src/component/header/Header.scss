@@ -1,0 +1,35 @@
+@import '../../mixins.scss';
+
+.header-page {
+    width: 100vw;
+    background-color: var(--black3);
+    height: 50px;
+
+    @include md {
+        height: 60px;
+    }
+
+    .contentWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            h1 {
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+
+                @include md {
+                    font-size: 25px;
+                }
+            }
+        }
+
+
+    }
+}

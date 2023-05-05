@@ -1,0 +1,10 @@
+.loader-bar {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
